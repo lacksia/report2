@@ -32,5 +32,32 @@ int main(){
 	printf("%d",add(a,b));
 }
 #3번 예상 문제
-
+#include <stdio.h>
+void main(){
+	int v[5]= {0,0,0,0,0};
+	int i;
+	for(i=0;i<600;i++){
+		v[rand()%5]++;
+	}
+	for(i=0;i<5;i++){
+		printf("v[%d]=%d\n",i+1,v[i]);
+	}
+}
 #4번 구조체
+#include <stdio.h>
+struct user{
+	int age;
+	char n[80];
+	char t[80];
+};
+void prn(struct user* me){
+	printf("%d %s %s\n", me->age, me->n, me->t);
+	me++;
+	printf("%d %s %s\n", me->age, me->n, me->t);
+	me++;
+	printf("%d %s %s\n", me->age, me->n, me->t);
+}
+int main(){
+	struct user me[3] = {18, "jcshim", "010-1111-2222", 16, "jeshim", "010-2111-2222", 14, "jbshim", "010-3111-2222" };
+	prn(me);
+}
