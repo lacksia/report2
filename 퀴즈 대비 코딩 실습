@@ -1,7 +1,36 @@
 #1번 계산기
-
+#include<stdio.h>
+#include<stdlib.h>
+int main(int n, char* v[]) {
+   int a, b, c;
+   if (n < 4) {
+      printf("매개변수가 모자랍니다.\n");
+      exit(0);
+   }
+   a = atoi(v[1]);
+   b = atoi(v[3]);
+   switch (v[2][0]) {
+   case '+': c = a + b; break;
+   case '-': c = a - b; break;
+   case '*': c = a * b; break;
+   case '/': c = a / b; break;
+   default: break;
+   }
+   printf("%d\n", c);
+}
 #2번 my.txt add()함수
-
+#include <stdio.h>
+int add(int a, int b){
+	return(a+b);
+}
+int main(){
+	int a,b;
+	FILE* fp;
+	fp = fopen("C:\\Users\\천준영\\Desktop","r");
+	fscanf(fp,"%d%d",&a,&b);
+	fclose(fp);
+	printf("%d",add(a,b));
+}
 #3번 예상 문제
 
 #4번 구조체
